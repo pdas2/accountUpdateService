@@ -16,7 +16,7 @@ public class Consumer {
     public void recievedMessage(String msg) {
 		
 		
-        System.out.println("Recieved Message: " + msg);
+        System.out.println("Received Message: " + msg);
         
         Object obj=JSONValue.parse(msg);  
         JSONObject jsonObject = (JSONObject) obj; 
@@ -26,7 +26,7 @@ public class Consumer {
         String offerid = (String) jsonObject.get("offerid");
         String userPhone = (String) jsonObject.get("userPhone");
         
-        String Log="Customer master CRM has being updated for you.This will allow us for scale this accross channels";
+        String Log="Customer master CRM details has being updated for you.This will allow us for scale this accross channels";
         Log=" "+Log+""+"User: "+userName+" "+"User account: "+userAccId+" "+"Phone: "+userPhone+" "+"Offer activated: "+offerid;
         
          System.out.println(Log);
